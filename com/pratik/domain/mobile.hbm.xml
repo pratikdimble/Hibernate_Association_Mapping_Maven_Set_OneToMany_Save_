@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--  Super Class Properties-->
+	<class name="com.pratik.domain.Mobile_OTM" table="Mobile_OTM" >
+		<id	name="phonenumber" column="PHONENUMBER" type="long" />
+
+		<property name="operator" column="OPERATOR" type="string" length="15"/>
+
+
+	</class>
+			
+</hibernate-mapping>

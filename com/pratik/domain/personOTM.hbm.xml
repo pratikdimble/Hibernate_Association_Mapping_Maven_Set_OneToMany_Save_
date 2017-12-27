@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--  Super Class Properties-->
+	<class name="com.pratik.domain.Person_OTM" table="Person_OTM" >
+		<id	name="pid" column="PID" type="int" >
+			<generator class="increment"></generator>
+		</id>
+		<property name="name" column="NAME" type="string" length="15"/>
+		<property name="city" column="CITY" type="string" length="10"/>
+			<set name="phones" cascade="all">
+				<key column="UserId"/>
+					<one-to-many class="com.pratik.domain.Mobiles_OTM"/>
+			</set>
+		</class>
+			
+</hibernate-mapping>
